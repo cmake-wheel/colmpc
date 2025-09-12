@@ -24,6 +24,9 @@ version = "0.3.0"
 homepage = "https://github.com/cmake-wheel/colmpc"
 upstream = "https://github.com/agimus-project/colmpc"
 
+[tool.cmeel]
+build-number = 0
+
 [tool.ruff]
 extend-exclude = ["cmake"]
 target-version = "py310"
