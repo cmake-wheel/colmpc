@@ -7,6 +7,7 @@ set(PROJECT_URL https://github.com/agimus-project/${PROJECT_NAME})
 
 # Project options
 option(BUILD_PYTHON_INTERFACE "Build the python binding" ON)
+option(BUILD_WITH_OPENMP_SUPPORT "Build the library with the OpenMP support" ON)
 option(SUFFIX_SO_VERSION "Suffix library name with its version" ON)
 option(GENERATE_PYTHON_STUBS
        "Generate the Python stubs associated to the Python library" OFF)
@@ -58,7 +59,9 @@ if(BUILD_PYTHON_INTERFACE)
   set(${PY_NAME}_INSTALL_DIR ${PYTHON_SITELIB})
 endif()
 
-add_project_dependency(OpenMP REQUIRED)
+if(BUILD_WITH_OPENMP_SUPPORT)
+  add_project_dependency(OpenMP REQUIRED)
+endif()
 add_project_dependency(crocoddyl REQUIRED)
 
 # Main Library
