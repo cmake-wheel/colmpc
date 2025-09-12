@@ -1,18 +1,18 @@
 [build-system]
 build-backend = "cmeel"
 requires = [
-  "cmeel[build]",
   "cmeel-boost ~= 1.87.0",
+  "cmeel[build]",
   "crocoddyl[build]",
   "mim-solvers[build]",
-  "numdifftools",
+  "numdifftools"
 ]
 
 [project]
 dependencies = [
   "cmeel-boost ~= 1.87.0",
   "crocoddyl",
-  "mim-solvers",
+  "mim-solvers"
 ]
 description = "Collision Avoidance for MPC"
 license = "BSD-2-Clause"
