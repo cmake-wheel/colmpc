@@ -2,6 +2,7 @@
 build-backend = "cmeel"
 requires = [
   "cmeel-boost ~= 1.87.0",
+  "cmeel-urdfdom-headers[build]",
   "cmeel[build]",
   "crocoddyl[build]",
   "mim-solvers[build]",

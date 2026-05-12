@@ -12,7 +12,7 @@ on:
 
 env:
   CMEEL_LOG_LEVEL: DEBUG
-  DEPS: crocoddyl[build] mim-solvers[build] numdifftools
+  DEPS: cmeel-urdfdom-headers[build] crocoddyl[build] mim-solvers[build] numdifftools
   PROJECT: colmpc
 
 jobs:
