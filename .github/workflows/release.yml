@@ -41,7 +41,7 @@ jobs:
           CIBW_REPAIR_WHEEL_COMMAND: ""
           CIBW_ENVIRONMENT: CMEEL_LOG_LEVEL="DEBUG" CMEEL_CMAKE_ARGS="-DBUILD_WITH_OPENMP_SUPPORT=${{ env.OPENMP }}"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: "artifact-${{ matrix.os }}-${{ matrix.python }}"
           path: wheelhouse
@@ -88,7 +88,7 @@ jobs:
           python -m pip install build cmeel[build] $DEPS
       - name: build sdist
         run: python -m build -nso dist .
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: artifact-sdist
           path: dist
