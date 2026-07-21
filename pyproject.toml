@@ -1,7 +1,7 @@
 [build-system]
 build-backend = "cmeel"
 requires = [
-  "cmeel-boost ~= 1.89.0",
+  "cmeel-boost ~= 1.90.0",
   "cmeel-urdfdom-headers[build]",
   "cmeel[build]",
   "crocoddyl[build]",
@@ -11,7 +11,7 @@ requires = [
 
 [project]
 dependencies = [
-  "cmeel-boost ~= 1.89.0",
+  "cmeel-boost ~= 1.90.0",
   "crocoddyl",
   "mim-solvers"
 ]
@@ -19,18 +19,11 @@ description = "Collision Avoidance for MPC"
 license = "BSD-2-Clause"
 name = "colmpc"
 readme = "README.md"
-version = "0.3.0"
+version = "0.4.0"
 
 [project.urls]
 homepage = "https://github.com/cmake-wheel/colmpc"
 upstream = "https://github.com/agimus-project/colmpc"
-
-[tool.cmeel]
-build-number = 0
-
-[tool.ruff]
-extend-exclude = ["cmake"]
-target-version = "py310"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "NPY", "PTH", "RUF", "UP", "W"]
